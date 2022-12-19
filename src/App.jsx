@@ -8,6 +8,8 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   async function getPokemon() {
+
+    document.title = "Pokemon !"
     setIsLoading(true);
     try {
       let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
