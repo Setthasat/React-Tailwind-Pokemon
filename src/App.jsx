@@ -2,6 +2,9 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 function App() {
+
+  document.title = "Pokemon !"
+  
   const [name, setName] = useState("pikachu");
   const [data, setData] = useState([]);
   const [err, setErr] = useState(false);
@@ -9,7 +12,6 @@ function App() {
 
   async function getPokemon() {
 
-    document.title = "Pokemon !"
     setIsLoading(true);
     try {
       let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
